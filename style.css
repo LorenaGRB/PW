@@ -12,11 +12,16 @@
     font-family: "Gill Sans MT";
     font-weight: bold;
 }
-
+::-webkit-input-placeholder { color:teal;} 
 /* ELEMENTOS HTML */
 html{
     background-image: url(2.Imagenes-png/Home/2.Home-v3-1920x1080.png);
     background-attachment: fixed;
+}
+header{
+    display: block;
+    width: 100%;
+    height: 30px;
 }
 body{
     display: flex;
@@ -24,17 +29,130 @@ body{
     justify-content: center;
     align-items: center;
 }
-    
-.zero{
-    padding:0px;
-    margin:0px;
-    border: 0px;
-}
-header{
-    display: block;
+h5{
+    text-align: center;
+    font-size: large;
+}    
+h3{
     width: 100%;
-    height: 30px;
+    color:rgb(0,51,102);
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 2%;
 }
+input{
+    font-size: large;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: teal;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color:rgb(182, 252, 248);
+    color:rgb(0,51,102);
+    font-family: 'Agency FB','Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    width: 300px;
+}
+/*CLASES */
+.zero{
+    padding:0px !important;
+    margin:0px !important;
+    border: 0px !important;
+    margin-block-start: 0px !important;
+    margin-block-end: 0px !important;
+}
+.internal-link{
+    color:rgb(0,51,102);
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.container{
+    font-family: 'Agency FB','Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    color:rgb(0,51,102);
+    padding-bottom: 5%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cincuenta{
+    width: 50%;
+    opacity:1;
+    transition: opacity margin-left 4s ease-in-out;
+}
+.oculto{
+    display:none;
+    opacity:0;
+}
+
+.tres-linea{
+    display:flex;
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 5%;
+}
+.let-peque{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    
+}
+.let-grandes{
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center; 
+}
+.service-description{
+    background-color: white;
+    width: 80%;
+    color: teal;
+    padding: 3%;
+    margin-right: 3%;
+}
+.sub-container{
+    display:flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top:5%;
+}   
+.font-white{
+    color:white;
+}
+#izq{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+#menssage{
+    width: 400px;
+    
+}
+#submit{
+    display:block;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 5px;
+    padding-top:5px;
+    border-radius: 10px;
+    
+    margin:20px auto;
+    color:white;
+    background-color: teal;
+
+}
+/* ID*/
 #nav-bar{
     width: 100%;
     position:fixed;
@@ -54,25 +172,9 @@ header{
     max-height: 30px;
     margin: 5px;
 }
-.internal-link{
-    color:rgb(0,51,102);
-    text-decoration: none;
-    font-size: 20px;
-    padding-left: 10px;
-    padding-right: 5px;
-}
-
-
 #inicio{
-    padding-top: 20%;
-    padding-bottom: 20%;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#texto{
-    width: 50%;
+    padding-top: 15% !important;
+    padding-bottom: 15% !important;
 }
 #p1{
     font-size:30px;
@@ -80,7 +182,7 @@ header{
     text-align: left;
 }
 #p2{
-    font-size:70px;
+    font-size:90px;
     color:aqua;
     text-align: center;
 }
@@ -88,29 +190,26 @@ header{
     font-size:30px;
     color:white;
     text-align: end;
-    
 }
-h3,h5{
-    text-align: center;
-}
-.container{
-    width:100%;
-
-}
-
-#nosotros{
+#nosotros{ 
     background-color: white;
 }
+#historia{
+    width: 70%;
+    background-color: rgba(2, 255, 242, 0.2);
+    padding: 5%;
+    font-size: 25px;
+}
 #servicios{
-    background-color: teal;
+    background-color: rgb(182, 252, 248);
 }
-#sub-servicios{
-    display:flex;
-    justify-content: space-around;
-    align-content: space-around;
-    
-}   
-.service-description{
-    border-color: thistle;
-    border-width: 10px;
+#contactanos{
+    background-color:rgb(0,51,102);
 }
+
+
+
+
+
+
+
