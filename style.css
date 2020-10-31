@@ -145,12 +145,13 @@ input{
     display:block;
     position: absolute;
     z-index :3000;
-    width: 250px;
-    height: 250px;
+    width: 250PX;
+    height: AUTO;
+
 }
-.imagen:hover{
+/* .imagen:hover{
     opacity:0;
-}
+} */
 .sub-horario{
     display: flex;
     flex-direction: column;
