@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>THERATRONICS</title>
 
+    <!-- SDK Email Service -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Y0ynh6MUor0yS9K9kIw7d');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.querySelector('form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('test_service', 'test_template', this);
+            });
+        }
+    </script>
 <!-- FONT-Agency-fb -->
 <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
 <!-- FONT-OCR a Extended -->
@@ -138,10 +155,10 @@
         <form>
             <div class="sub-container inputs">
                 <div id="izq">
-                    <input type="text" Placeholder="NOMBRE">
-                    <input type="text" Placeholder="EMPRESA">
-                    <input type="number" name="" id="" Placeholder="TELÉFONO">
-                    <input type="email" name="" id="" Placeholder="EMAIL"> 
+                    <input type="text" name="from_name" Placeholder="NOMBRE">
+                    <input type="text" name="company" Placeholder="EMPRESA">
+                    <input type="number" name="mobile" Placeholder="TELÉFONO">
+                    <input type="email" name="email" Placeholder="EMAIL"> 
                 </div>
                 <input type="text" id="menssage" name="message" placeholder="Escriba su mensaje aquí" rows="10"></textarea>
             </div>
