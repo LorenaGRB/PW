@@ -83,7 +83,7 @@ input{
     align-items: center;
     flex-direction: column;
 }
-.cincuenta{
+.mensajeMostrado{
     width: 50%;
     opacity:1 ;
     transition-property: opacity;
@@ -124,6 +124,12 @@ input{
     padding: 3%;
     margin: 3%;
     
+}
+.service-title{
+    font-size:5px;
+}
+.ul-service{
+    font-size:25px;
 }
 .sub-container{
     display:flex;
@@ -277,7 +283,7 @@ input{
         justify-content: center;
         align-items: center;
     }   
-    .cincuenta{
+    .mensajeMostrado{
         width: 70%;
     }
     /* ID*/
@@ -335,7 +341,7 @@ input{
     .service-description{
         width: 70%;  
     }
-    .cincuenta{
+    .mensajeMostrado{
         width: 90%;
     }
     #logo-Theratronics{

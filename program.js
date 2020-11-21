@@ -1,40 +1,48 @@
-function changeMessage(elementoArr) {  
-    setInterval(function(indexOfTrue=locationOfMessage(elementoArr)){         
-        document.getElementById(`op${indexOfTrue+1}`).classList.add("d0");
+//los que llevan clase d0 cambian de opacidad 1 a 0.Los que llevan "oculto" tiene display none.
+//Los mensajes tiene como id op1,op2 y op3 correspondiente a cada uno d0.
+
+function changeMessage(mensajeMostradoArr) {  
+
+    setInterval(function(posicionMensajeMostrado=locationOfMessage(mensajeMostradoArr)){         
+        let mensajeActual=posicionMensajeMostrado+1;
+        let mensajeSiguiente=posicionMensajeMostrado+2;
+        let ultimoMensaje=mensajeMostradoArr.length-1;
+        
+        document.getElementById(`op${mensajeActual}`).classList.add("d0");
         setTimeout(() => {
-            document.getElementById(`op${indexOfTrue+1}`).addEventListener("transitionend",changeClass(indexOfTrue,"oculto"));
+            document.getElementById(`op${mensajeActual}`).addEventListener("transitionend",changeClass(posicionMensajeMostrado,"oculto"));
             setTimeout(() => {
-                if(indexOfTrue==elementoArr.length-1){
+                if(posicionMensajeMostrado==ultimoMensaje){
                     document.getElementById(`op${1}`).classList.remove("d0");
-            
                 }else{
-                    document.getElementById(`op${indexOfTrue+2}`).classList.remove("d0");
+                    document.getElementById(`op${mensajeSiguiente}`).classList.remove("d0");
                 }  
             }, 1000);
-            
         }, 1000);
     }, 5000);
 }
-function locationOfMessage(arr) {
-    let cantidad = arr.length;
-    let array=[];
-    for(i=0;i!=cantidad;i++){
-        arr.forEach((element,index)=> {
+function locationOfMessage(mensajeMostradoArr) {
+        let array=[];
+
+        mensajeMostradoArr.forEach((element,index)=> {
             array[index]=document.getElementById(`op${index+1}`).classList.contains("oculto");
-    });
+        });
     return array.indexOf(false);
-    }
+    
 }
-function changeClass(indexOfTrue,clase){
-    document.getElementById(`op${indexOfTrue+1}`).classList.add(clase);
-    if(indexOfTrue==elementoArr.length-1){
+function changeClass(posicionMensajeMostrado,clase){
+        let mensajeActual=posicionMensajeMostrado+1;
+        let mensajeSiguiente=posicionMensajeMostrado+2;
+        let ultimoMensaje=mensajeMostradoArr.length-1;
+        
+    document.getElementById(`op${mensajeActual}`).classList.add(clase);
+    if(posicionMensajeMostrado==ultimoMensaje){
         document.getElementById(`op${1}`).classList.remove(clase);
     }else{
-        document.getElementById(`op${indexOfTrue+2}`).classList.remove(clase);
+        document.getElementById(`op${mensajeSiguiente}`).classList.remove(clase);
     }
-    console.log(`op${indexOfTrue+1}`);
 }
 
-let elemento=document.querySelectorAll(".cincuenta");
-let elementoArr = Array.from(elemento);
-changeMessage(elementoArr);
+let mensajeMostrado=document.querySelectorAll(".mensajeMostrado");
+let mensajeMostradoArr = Array.from(mensajeMostrado);
+changeMessage(mensajeMostradoArr);
