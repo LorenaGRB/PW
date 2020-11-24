@@ -1,4 +1,16 @@
 /* FONTS */
+@font-face {
+    font-family: 'Agency FB';
+    src: url('3.Fonts/AgencyFB/AgencyFB.ttf') format('WOFF2');
+}
+@font-face {
+    font-family: 'OCR A Extended';
+    src: url('3.Fonts/OcrAExtended/OCRAEXT.TTF') format('WOFF2');
+}
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('3.Fonts/GillSansMT/Gill\ Sans\ MT\ Bold.ttf') format('WOFF2');
+}
 .agency-fb {
     font-family: 'Agency FB','Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
     font-weight: normal;
@@ -286,6 +298,11 @@ input{
     .mensajeMostrado{
         width: 70%;
     }
+    #historia{
+    font-size: 20px;
+    width: 80%;
+    padding: 5%;
+    }
     /* ID*/
     #p2{
         font-size:80px;
@@ -308,6 +325,19 @@ input{
         float: right;
         padding-right: 2%;
         padding-bottom: 1%;
+    }
+    .service-title{
+        font-size:30px;
+    }
+    .ul-service{
+        font-size:20px;
+    }
+    .imagen ,.imagen-bck{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .service-description{
+        max-width: 400px;
     }
 }
 
@@ -354,6 +384,20 @@ input{
     #menssage{
         width: 150px;
     }
+    .service-title{
+        font-size:25px;
+    }
+    .ul-service{
+        font-size:15px;
+    }
+    .imagen ,.imagen-bck{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .service-description{
+        max-width: 300px;
+    }
+
 }
 /* CELULARES */
 @media (max-width: 450px){
